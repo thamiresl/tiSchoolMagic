@@ -5,10 +5,60 @@
 
 .header {
     background-color: rgb(50, 167, 145);
+    height: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .formulario-email{
     display: flex;
 }
+
+#trybewarts-header-title{
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.trybewarts-header-logo {
+    height: 70px;
+    margin-left: 20px;
+}
+
+.formulario-email {
+    margin-right: 20px;
+}
+
+.header :nth-child(1){
+    order: 2;
+}
+
+.header :nth-child(2){
+    order: 1;
+}
+
+.header :nth-child(3){
+    order: 3;
+}
+
+#evaluation-form{
+    width: 675px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#trybewarts-forms-logo{
+    height: 500px;
+    float: right;
+}
+
+#input-lastname{
+    float: right;
+}
+
+
+

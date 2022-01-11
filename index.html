@@ -6,20 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trybewarts</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
 </head>
 <body>
     <header class="header">
+      <h1 id="trybewarts-header-title">Trybewarts</h1>
       <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg">
-        <div>
-        <form class="formulario-email">
-            <label for="email">E-mail</label>
+    
+      <form class="trybewarts-login">
             <input type="email" placeholder="Email" name="email" id="email">
-            <input type="password" placeholder="Password" name="senha" id="senha">
+            <input type="password" placeholder="Senha" name="password" id="senha">
             <input type="button" name="entrar" value="Entrar" id="botao">
-        </form>
-        </div>
+      </form>
     </header>
     
+    <main>
+        <form id="evaluation-form">
+            <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg">
+
+            <h2>Formulário de Avaliação</h2>
+            <input type="text" placeholder="Nome" name="nome" id="input-name">
+            <input type="text" placeholder="Sobrenome" name="sobrenome" id="input-lastname">
+            <input type="email" placeholder="Email" name="email-evaluation-form" id="input-email">
+
+            <label>Casas:</label>
+            <select name="house" id="house">
+                <option value="gitnória" text="gitnória" id="gitnoria-house">Gitnória</option>
+                <option value="reactpuff" text="reactpuff" id="reactpuff-house">Reactpuff</option>
+                <option value="corvinode" text="corvinode" id="corvinode-house">Corvinode</option>
+                <option value="pytheria" text="pytheria" id="pytherina-house">Pytheria</option>
+            </select>
+
+        </form>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
