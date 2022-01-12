@@ -1,5 +1,6 @@
  
-let botaoEmail= document.querySelector("#botao");
+let botaoEmail = document.querySelector("#botao");
+let checkbox = document.querySelector("#agreement");
 
 function validarEmail (){
     let formEmail= document.querySelector("#email");
@@ -13,3 +14,15 @@ function validarEmail (){
 }
 
 botaoEmail.addEventListener("click", validarEmail);
+
+function validarBtn() {
+    let btn = document.querySelector("#submit-btn");
+    if (checkbox.checked){
+        btn.disabled = false;
+    }
+    else {
+        btn.disabled = true;
+    }
+}
+
+checkbox.addEventListener("click", validarBtn);
