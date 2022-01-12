@@ -11,7 +11,11 @@
     align-items: center;
 }
 
-.trybewarts-loginl{
+.trybewarts-login {
+    display: flex;
+}
+
+.formulario-email{
     display: flex;
     margin-right: 20px;
 }
@@ -39,6 +43,10 @@
     align-items: center;
 }
 
+.evaluation-form {
+
+}
+
 #trybewarts-forms-logo{
     height: 500px;
     float: right;
@@ -51,6 +59,11 @@
     gap: 5px;
 }
 
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
 
 
 
