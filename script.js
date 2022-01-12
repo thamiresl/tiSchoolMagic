@@ -1,7 +1,6 @@
  
 let botaoEmail= document.querySelector("#botao");
 
-
 function validarEmail (){
     let formEmail= document.querySelector("#email");
     let formSenha= document.querySelector("#senha");
