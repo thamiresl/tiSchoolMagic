@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.trybewarts-login {
+    display: flex;
+}
+
 .formulario-email{
     display: flex;
 }
@@ -32,11 +36,11 @@
 }
 
 .header :nth-child(1){
-    order: 2;
+    order: 1;
 }
 
 .header :nth-child(2){
-    order: 1;
+    order: 2;
 }
 
 .header :nth-child(3){
@@ -60,5 +64,10 @@
     float: right;
 }
 
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
 
 
