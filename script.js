@@ -9,7 +9,6 @@ const familia = document.querySelector('#family');
 const avaliacao = document.querySelector('rate');
 const materia = document.querySelector('materia');
 
-
 function validarEmail() {
   const formEmail = document.querySelector('#email');
   const formSenha = document.querySelector('#senha');
@@ -34,27 +33,24 @@ function validarBtn() {
 
 checkbox.addEventListener('click', validarBtn);
 
-function contarTextArea () {
-  let texto = textArea.value;
-  let paragrafo = document.querySelector("#counter");
+function contarTextArea() {
+  const texto = textArea.value;
+  const paragrafo = document.querySelector('#counter');
   paragrafo.innerText = `${500 - texto.length} Caracteres restantes`;
 }
-textArea.addEventListener("keyup", contarTextArea);
+textArea.addEventListener('keyup', contarTextArea);
 
-const botaoSubmit = document.querySelector ("#submit-btn");
-function gerarRelatorio (event){
-  event.preventDefault()
-  
+const botaoSubmit = document.querySelector('#submit-btn');
+function gerarRelatorio(event) {
+  event.preventDefault();
   document.querySelector('#input-name').value = nome.value;
   document.querySelector('#input-lastname').value = sobrenome.value;
   document.querySelector('#agreement').value = checkbox.value;
-  document.querySelector('#textarea').value = textArea.value; 
-  document.querySelector('#input-email').value =  email.value;
+  document.querySelector('#textarea').value = textArea.value;
+  document.querySelector('#input-email').value = email.value;
   document.querySelector('#house').value = casa.value;
   document.querySelector('#family').value = familia.value;
   document.querySelector('rate').value = avaliacao.value;
   document.querySelector('materia').value = materia.value;
 }
-botaoSubmit.addEventListener("click", gerarRelatorio);
-
- 
+botaoSubmit.addEventListener('click', gerarRelatorio);
