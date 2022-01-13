@@ -43,14 +43,27 @@ textArea.addEventListener('keyup', contarTextArea);
 const botaoSubmit = document.querySelector('#submit-btn');
 function gerarRelatorio(event) {
   event.preventDefault();
-  document.querySelector('#input-name').value = nome.value;
-  document.querySelector('#input-lastname').value = sobrenome.value;
-  document.querySelector('#agreement').value = checkbox.value;
-  document.querySelector('#textarea').value = textArea.value;
-  document.querySelector('#input-email').value = email.value;
-  document.querySelector('#house').value = casa.value;
-  document.querySelector('#family').value = familia.value;
-  document.querySelector('rate').value = avaliacao.value;
-  document.querySelector('materia').value = materia.value;
+  const botaoEmail = document.querySelector('#botao').value;
+  const textArea = document.querySelector('#textarea').value;
+  const nome = document.querySelector('#input-name').value;
+  const sobrenome = document.querySelector('#input-lastname').value;
+  const email = document.querySelector('#input-email').value;
+  const casa = document.querySelector('#house').value;
+  const checkbox = document.querySelector('#agreement').value;
+  const familia = document.querySelector('input[name="family"]:checked').value;
+  const avaliacao = document.querySelector('input[name="rate"]:checked').value;
+  const materia = checkbox();
 }
+
+function ckeckBox () {
+  const materia = document.querySelectorAll('materia');
+  let materiaCheck = [];
+  for (let i = 0; i < materia.length; i++){
+    if (materia[i].checked){
+      materiaCheck.push(materia[i].value);
+    }
+  }
+  return materiaCheck;
+}
+
 botaoSubmit.addEventListener('click', gerarRelatorio);
