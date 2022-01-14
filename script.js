@@ -1,13 +1,6 @@
 const botaoEmail = document.querySelector('#botao');
 const checkbox = document.querySelector('#agreement');
 const textArea = document.querySelector('#textarea');
-const nome = document.querySelector('#input-name');
-const sobrenome = document.querySelector('#input-lastname');
-const email = document.querySelector('#input-email');
-const casa = document.querySelector('#house');
-const familia = document.querySelector('#family');
-const avaliacao = document.querySelector('rate');
-const materia = document.querySelector('materia');
 
 function validarEmail() {
   const formEmail = document.querySelector('#email');
@@ -44,7 +37,7 @@ const botaoSubmit = document.querySelector('#submit-btn');
 
 function checkBoxMateria() {
   const materiaRecuperadas = document.querySelectorAll('.materia');
-  let materiaCheck = [];
+  const materiaCheck = [];
   for (let i = 0; i < materiaRecuperadas.length; i += 1) {
     if (materiaRecuperadas[i].checked) {
       materiaCheck.push(` ${materiaRecuperadas[i].value}`);
