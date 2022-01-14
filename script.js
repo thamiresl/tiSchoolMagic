@@ -41,29 +41,42 @@ function contarTextArea() {
 textArea.addEventListener('keyup', contarTextArea);
 
 const botaoSubmit = document.querySelector('#submit-btn');
-function gerarRelatorio(event) {
-  event.preventDefault();
-  const botaoEmail = document.querySelector('#botao').value;
-  const textArea = document.querySelector('#textarea').value;
-  const nome = document.querySelector('#input-name').value;
-  const sobrenome = document.querySelector('#input-lastname').value;
-  const email = document.querySelector('#input-email').value;
-  const casa = document.querySelector('#house').value;
-  const checkbox = document.querySelector('#agreement').value;
-  const familia = document.querySelector('input[name="family"]:checked').value;
-  const avaliacao = document.querySelector('input[name="rate"]:checked').value;
-  const materia = checkbox();
-}
 
-function ckeckBox () {
-  const materia = document.querySelectorAll('materia');
+function checkBoxMateria() {
+  const materiaRecuperadas = document.querySelectorAll('.materia');
   let materiaCheck = [];
-  for (let i = 0; i < materia.length; i++){
-    if (materia[i].checked){
-      materiaCheck.push(materia[i].value);
+  for (let i = 0; i < materiaRecuperadas.length; i += 1) {
+    if (materiaRecuperadas[i].checked) {
+      materiaCheck.push(` ${materiaRecuperadas[i].value}`);
     }
   }
   return materiaCheck;
 }
 
+function gerarP(form, texto) {
+  const p = document.createElement('P');
+  p.innerText = texto;
+  form.appendChild(p);
+}
+
+function gerarRelatorio(event) {
+  event.preventDefault();
+  const observacoes = document.querySelector('#textarea').value;
+  const nome = document.querySelector('#input-name').value;
+  const sobrenome = document.querySelector('#input-lastname').value;
+  const email = document.querySelector('#input-email').value;
+  const casa = document.querySelector('#house').value;
+  const familia = document.querySelector('input[name="family"]:checked').value;
+  const avaliacao = document.querySelector('input[name="rate"]:checked').value;
+  const materias = checkBoxMateria();
+  const form = document.querySelector('#evaluation-form');
+  form.innerHTML = '';
+  gerarP(form, `Nome: ${nome} ${sobrenome}`);
+  gerarP(form, `Email: ${email}`);
+  gerarP(form, `Casa: ${casa}`);
+  gerarP(form, `Família: ${familia}`);
+  gerarP(form, `Matérias:${materias}`);
+  gerarP(form, `Avaliação: ${avaliacao}`);
+  gerarP(form, `Observações: ${observacoes}`);
+}
 botaoSubmit.addEventListener('click', gerarRelatorio);
