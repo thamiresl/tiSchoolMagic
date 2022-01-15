@@ -1,6 +1,7 @@
 const botaoEmail = document.querySelector('#botao');
 const checkbox = document.querySelector('#agreement');
 const textArea = document.querySelector('#textarea');
+const btn = document.querySelector('#submit-btn');
 
 function validarEmail() {
   const formEmail = document.querySelector('#email');
@@ -14,9 +15,12 @@ function validarEmail() {
 }
 
 botaoEmail.addEventListener('click', validarEmail);
+window.onload = () => {
+  btn.disabled = true;
+};
 
 function validarBtn() {
-  const btn = document.querySelector('#submit-btn');
+  console.log('aqui');
   if (checkbox.checked) {
     btn.disabled = false;
   } else {

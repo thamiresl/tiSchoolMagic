@@ -55,10 +55,10 @@ input[type=password] {
 
 input[type=text] {
   height: 32px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(204, 204, 204)
   border-radius: 8px;
 }
- 
+
 #trybewarts-header-title {
   text-align: center;
   font-size: 52px;
@@ -108,30 +108,29 @@ h2 {
 
 #submit-btn {
   background-color: hsl(242, 30%, 58%);
-  color: #fff;
+  color: white;
   width: 260px;
   height: 40px;
   border: none;
-  box-shadow: 4px 5px 4px rgba(0,0,0, 0.25);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   font-weight: 600;
   font-size: 18px;
 }
 
-#submit-btn:hover{
+#submit-btn:hover {
   background-color: hsl(241, 27%, 68%);
   cursor: pointer;
 }
 
-footer{
+footer {
   background-color: rgb(90, 87, 87);
-  color: #fff;
+  color: white;
   font-size: 1.3rem;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
