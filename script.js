@@ -2,7 +2,6 @@ const botaoEmail = document.querySelector('#botao');
 const checkbox = document.querySelector('#agreement');
 const textArea = document.querySelector('#textarea');
 
-
 function validarEmail() {
   const formEmail = document.querySelector('#email');
   const formSenha = document.querySelector('#senha');
